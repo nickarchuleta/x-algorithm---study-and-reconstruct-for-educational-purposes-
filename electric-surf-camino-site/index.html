@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Surf Camino | Slow Water Pilgrimage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">⚡ ELECTRIC SURF CAMINO</div>
+            <ul class="nav-menu">
+                <li><a href="#hero">HOME</a></li>
+                <li><a href="#routes">ROUTES</a></li>
+                <li><a href="#gear">GEAR</a></li>
+                <li><a href="#philosophy">PHILOSOPHY</a></li>
+                <li><a href="#europe">EUROPE OPTIMIZATION</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>ELECTRIC SURF CAMINO</h1>
+            <p class="tagline">Slow Water Pilgrimage | Ride. Charge. Ruck. Shred. Recover. Repeat.</p>
+            <div class="hero-grid">
+                <div class="hero-item">
+                    <span class="hero-icon">⚡</span>
+                    <span>Stark Varg EX</span>
+                </div>
+                <div class="hero-item">
+                    <span class="hero-icon">🏄</span>
+                    <span>LIND Canvas</span>
+                </div>
+                <div class="hero-item">
+                    <span class="hero-icon">🎒</span>
+                    <span>Heavy Pack</span>
+                </div>
+                <div class="hero-item">
+                    <span class="hero-icon">🏨</span>
+                    <span>Credit Card Tour</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes Section -->
+    <section id="routes" class="routes">
+        <h2>THE TWO PILGRIMAGES</h2>
+
+        <div class="route-selector">
+            <button class="route-btn active" data-route="seattle-cabo">
+                🌊 SEATTLE → CABO
+            </button>
+            <button class="route-btn" data-route="norway-ibiza">
+                🏔️ NORWAY → IBIZA
+            </button>
+        </div>
+
+        <!-- Seattle to Cabo Route -->
+        <div class="route-container active" id="route-seattle-cabo">
+            <div class="route-header">
+                <h3>THE SHAKEDOWN PILGRIMAGE</h3>
+                <p>Seattle to Cabo: Testing the concept on North American water</p>
+            </div>
+
+            <div class="route-info-grid">
+                <div class="info-card">
+                    <h4>📊 STATS</h4>
+                    <ul>
+                        <li><strong>Distance:</strong> 1,200+ miles</li>
+                        <li><strong>Duration:</strong> 6-8 weeks</li>
+                        <li><strong>Daily Average:</strong> 40-70 miles</li>
+                        <li><strong>Water Days:</strong> 4-5 per week</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h4>🎯 MISSION</h4>
+                    <ul>
+                        <li>Proof of concept shakedown</li>
+                        <li>Learn real loaded range</li>
+                        <li>Test charging SOPs</li>
+                        <li>Content system validation</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h4>💧 WATER OPPORTUNITIES</h4>
+                    <ul>
+                        <li>PNW cold water launches</li>
+                        <li>California coastal breaks</li>
+                        <li>Glassy morning sessions</li>
+                        <li>Baja desert water strikes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="phases-container">
+                <h4>ROUTE PHASES</h4>
+                <div class="phase-timeline">
+                    <div class="phase" style="--phase-color: #4a90e2;">
+                        <span class="phase-number">1</span>
+                        <span class="phase-name">Seattle → Oregon</span>
+                        <span class="phase-distance">200 mi</span>
+                    </div>
+                    <div class="phase" style="--phase-color: #50c878;">
+                        <span class="phase-number">2</span>
+                        <span class="phase-name">OR Coast / Inland</span>
+                        <span class="phase-distance">250 mi</span>
+                    </div>
+                    <div class="phase" style="--phase-color: #f5a623;">
+                        <span class="phase-number">3</span>
+                        <span class="phase-name">Northern California</span>
+                        <span class="phase-distance">300 mi</span>
+                    </div>
+                    <div class="phase" style="--phase-color: #f8a623;">
+                        <span class="phase-number">4</span>
+                        <span class="phase-name">Central/Southern CA</span>
+                        <span class="phase-distance">250 mi</span>
+                    </div>
+                    <div class="phase" style="--phase-color: #e74c3c;">
+                        <span class="phase-number">5</span>
+                        <span class="phase-name">Baja to Cabo</span>
+                        <span class="phase-distance">350 mi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <canvas id="map-seattle-cabo"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Norway to Ibiza Route -->
+        <div class="route-container" id="route-norway-ibiza">
+            <div class="route-header">
+                <h3>THE PROVING GROUND PILGRIMAGE</h3>
+                <p>Norway to Ibiza: International scale, climate gradients, European infrastructure</p>
+            </div>
+
+            <div class="route-info-grid">
+                <div class="info-card">
+                    <h4>📊 STATS</h4>
+                    <ul>
+                        <li><strong>Distance:</strong> 2,000+ miles</li>
+                        <li><strong>Duration:</strong> 10-14 weeks</li>
+                        <li><strong>Daily Average:</strong> 35-60 miles</li>
+                        <li><strong>Water Days:</strong> 5-6 per week</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h4>🎯 MISSION</h4>
+                    <ul>
+                        <li>International scalability proof</li>
+                        <li>Climate gradient testing</li>
+                        <li>Ferry + border navigation</li>
+                        <li>European infrastructure integration</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h4>💧 WATER OPPORTUNITIES</h4>
+                    <ul>
+                        <li>Arctic fjord launches</li>
+                        <li>Alpine lake shredding</li>
+                        <li>European canal networks</li>
+                        <li>Mediterranean finish water</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="phases-container">
+                <h4>ROUTE PHASES</h4>
+                <div class="phase-timeline">
+                    <div class="phase" style="--phase-color: #4a90e2;">
+                        <span class="phase-number">1</span>
+                        <span class="phase-name">Norway Fjords</span>
+                        <span class="phase-distance">300 mi</span>
+                    </div>
+                    <div class="phase" style="--phase-color: #50c878;">
+                        <span class="phase-number">2</span>
+                        <span class="phase-name">Scand to Europe</span>
+                        <span class="phase-distance">350 mi</span>
+                    </div>
+                    <div class="phase" style="--phase-color: #f5a623;">
+                        <span class="phase-number">3</span>
+                        <span class="phase-name">Central Europe Transit</span>
+                        <span class="phase-distance">450 mi</span>
+                    </div>
+                    <div class="phase" style="--phase-color: #f8a623;">
+                        <span class="phase-number">4</span>
+                        <span class="phase-name">Alps / Lakes</span>
+                        <span class="phase-distance">350 mi</span>
+                    </div>
+                    <div class="phase" style="--phase-color: #e74c3c;">
+                        <span class="phase-number">5</span>
+                        <span class="phase-name">Mediterranean → Ibiza</span>
+                        <span class="phase-distance">550 mi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <canvas id="map-norway-ibiza"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Europe Optimization Section -->
+    <section id="europe" class="europe-optimization">
+        <h2>EUROPE OPTIMIZATION</h2>
+        <p class="section-subtitle">Hitting Castles, Raves, and Red Light Districts on the Electric Surf Camino</p>
+
+        <div class="optimization-grid">
+            <div class="optimization-card">
+                <h3>🏰 CASTLES & HISTORIC SITES</h3>
+                <p><strong>Strategy:</strong> Route through Alpine passes and Rhine valley</p>
+                <ul>
+                    <li><strong>Neuschwanstein (Bavaria)</strong> - Phase 4, perfect detour from Zurich corridor</li>
+                    <li><strong>Chambord (Loire Valley)</strong> - Phase 3, scenic backroad through wine country</li>
+                    <li><strong>Bran Castle (Transylvania)</strong> - Phase 3, dark energy detour, excellent charging</li>
+                    <li><strong>Hohensalzburg (Austria)</strong> - Phase 4, lake-adjacent, water + altitude test</li>
+                    <li><strong>Alhambra (Granada)</strong> - Phase 5, Mediterranean approach, heat management test</li>
+                </ul>
+                <p class="optimization-tip">💡 Medieval towns = excellent hostels, safe bike parking, cultural immersion</p>
+            </div>
+
+            <div class="optimization-card">
+                <h3>🎉 RAVES & ELECTRONIC MUSIC VENUES</h3>
+                <p><strong>Strategy:</strong> Use Phase 3 (Central Europe) and Phase 5 (Mediterranean) for festival routing</p>
+                <ul>
+                    <li><strong>Berlin Techno Scene</strong> - Phase 3, world capital, legendary clubs (Berghain, Tresor)</li>
+                    <li><strong>Amsterdam Electronic Music</strong> - Phase 2/3 junction, canal-side venues, easy logistics</li>
+                    <li><strong>Ibiza DJ Culture</strong> - Phase 5 destination, natural endpoint, content goldmine</li>
+                    <li><strong>Prague Underground</strong> - Phase 3, hidden venues, hostel discovery networks</li>
+                    <li><strong>Barcelona Summer Festivals</strong> - Phase 5, large outdoor raves, coastal energy</li>
+                </ul>
+                <p class="optimization-tip">💡 Time Phase 3-5 for summer festival season (June-August). Use charging stops as scout points for venue locations.</p>
+            </div>
+
+            <div class="optimization-card">
+                <h3>🔴 RED LIGHT DISTRICTS & BOHEMIAN CULTURE</h3>
+                <p><strong>Strategy:</strong> Urban centers in Phase 3 (central Europe) contain world-famous districts</p>
+                <ul>
+                    <li><strong>Amsterdam Red Light District</strong> - Phase 2/3, legal, historic, excellent water access via canals</li>
+                    <li><strong>Berlin Kreuzberg</strong> - Phase 3, art/counter-culture hub, experimental music scene</li>
+                    <li><strong>Hamburg Reeperbahn</strong> - Phase 2, iconic music venue corridor, Beatles history</li>
+                    <li><strong>Prague Old Town</strong> - Phase 3, historic bohemian quarter, cheap excellent hostels</li>
+                    <li><strong>Barcelona Gothic Quarter</strong> - Phase 5, narrow medieval streets, vibrant nightlife, water adjacent</li>
+                </ul>
+                <p class="optimization-tip">💡 These neighborhoods = best social energy, local knowledge, late-night charging access (clubs have generators), content authenticity</p>
+            </div>
+        </div>
+
+        <div class="routing-optimization">
+            <h3>🗺️ PHASE 3 OPTIMIZATION: THE RAVES/CASTLES CORRIDOR</h3>
+            <p>The sweet spot: Central Europe from Netherlands through Austria to Bavaria (350 mi detour, adds 1 week)</p>
+
+            <div class="route-sequence">
+                <div class="route-stop">
+                    <span class="stop-day">Day 1-2</span>
+                    <span class="stop-name">Amsterdam</span>
+                    <span class="stop-detail">Red Light District + Canals + LIND water + Electronic clubs</span>
+                </div>
+                <div class="route-stop">
+                    <span class="stop-day">Day 3-4</span>
+                    <span class="stop-name">Berlin</span>
+                    <span class="stop-detail">Techno capital + Underground scene + Lake Müggel water</span>
+                </div>
+                <div class="route-stop">
+                    <span class="stop-day">Day 5</span>
+                    <span class="stop-name">Prague</span>
+                    <span class="stop-detail">Bohemian culture + Historic center + Vltava river water</span>
+                </div>
+                <div class="route-stop">
+                    <span class="stop-day">Day 6-7</span>
+                    <span class="stop-name">Salzburg / Hallstatt</span>
+                    <span class="stop-detail">Austrian lakes + Mountain passes + Castle density</span>
+                </div>
+                <div class="route-stop">
+                    <span class="stop-day">Day 8-9</span>
+                    <span class="stop-name">Bavaria / Neuschwanstein</span>
+                    <span class="stop-detail">Castle route + Alpine lakes + LIND paradise water</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="optimization-tips">
+            <h3>🎯 EUROPE-SPECIFIC OPTIMIZATION TIPS</h3>
+            <ul class="tips-list">
+                <li><strong>Hostel Intel:</strong> European hostels are hubs. Ask staff about raves, live music, local venues. They know everything.</li>
+                <li><strong>Festival Calendar:</strong> Pre-plan Phase 3-5 around electronic music festivals (Sonus in Croatia, Dimensions in Spain, Fusion in Germany).</li>
+                <li><strong>Water Access:</strong> Canals in Amsterdam, rivers in Prague and Budapest, Alpine lakes throughout phase 4—optimal LIND territory.</li>
+                <li><strong>Charging Density:</strong> Central Europe has best AC charging network. Use this to your advantage for longer social charging stops.</li>
+                <li><strong>Visa/Border Timing:</strong> Schengen area (Phase 2-5) = zero border friction. Use it.</li>
+                <li><strong>Castle Routes:</strong> German/Austrian/Czech tourist boards have castle circuit maps. Follow them.</li>
+                <li><strong>Night Life Sync:</strong> Ride mornings (40-60 miles), charge midday (3-4 hours), water session (1-2 hours), night out (clubs/raves until dawn), sleep late, repeat.</li>
+                <li><strong>Content Gold:</strong> White Varg + European medieval backdrop + electronic music venue = viral contrast energy.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Gear Section -->
+    <section id="gear" class="gear">
+        <h2>GEAR SETUP</h2>
+
+        <div class="gear-grid">
+            <div class="gear-card core-gear">
+                <h3>🚗 LAND PLATFORM</h3>
+                <div class="gear-item">
+                    <span class="gear-name">Stark Varg EX</span>
+                    <span class="gear-spec">White electric dirtbike</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">White Troy Lee Designs Helmet</span>
+                    <span class="gear-spec">Gloss white for content + durability</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Fjallraven Greenland Waxed Kit</span>
+                    <span class="gear-spec">Navy/earth tone expedition aesthetic</span>
+                </div>
+            </div>
+
+            <div class="gear-card core-gear">
+                <h3>🌊 WATER PLATFORM</h3>
+                <div class="gear-item">
+                    <span class="gear-name">LIND Canvas Shortboard</span>
+                    <span class="gear-spec">Electric surfboard hull (side-mounted)</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">LIND Battery + Jet System</span>
+                    <span class="gear-spec">Backpack-mounted propulsion</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">HoverAir AQUA</span>
+                    <span class="gear-spec">Water-rated drone (optional, country-legal)</span>
+                </div>
+            </div>
+
+            <div class="gear-card core-gear">
+                <h3>🎒 LOAD SYSTEM</h3>
+                <div class="gear-item">
+                    <span class="gear-name">Heavy LIND Backpack</span>
+                    <span class="gear-spec">70-85 lbs loaded (rucking stimulus)</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Vivobarefoot Jungle ESC</span>
+                    <span class="gear-spec">Walking + rucking comfort boots</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Light Linen Backup Outfit</span>
+                    <span class="gear-spec">White shirt + trousers reset uniform</span>
+                </div>
+            </div>
+
+            <div class="gear-card content-gear">
+                <h3>📸 CONTENT CAPTURE</h3>
+                <div class="gear-item">
+                    <span class="gear-name">Oakley Meta Vanguard</span>
+                    <span class="gear-spec">POV + hands-free capture</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Phone + Chargers</span>
+                    <span class="gear-spec">Primary documentation device</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Basic Charger Kit</span>
+                    <span class="gear-spec">Varg adapter + LIND adapter + backup</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="loadout-philosophy">
+            <h3>📦 THE RUTHLESS KIT DOCTRINE</h3>
+            <p>Every item must justify itself against one of these categories:</p>
+            <div class="doctrine-grid">
+                <div>1. Safety</div>
+                <div>2. Charging</div>
+                <div>3. Water</div>
+                <div>4. Security</div>
+                <div>5. Minimal Hygiene</div>
+                <div>6. Content Capture</div>
+                <div>7. Repair</div>
+                <div>8. Legal/Border</div>
+                <div>9. Warmth/Weather</div>
+                <div>10. Daily Identity</div>
+            </div>
+            <p style="margin-top: 1rem;"><strong>Rule:</strong> If it is just comfort clutter, it gets cut.</p>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="philosophy">
+        <h2>THE PHILOSOPHY</h2>
+
+        <div class="golden-rules">
+            <h3>⚡ GOLDEN RULES (25 COMMANDMENTS)</h3>
+            <div class="rules-grid">
+                <div class="rule">
+                    <span class="rule-number">1</span>
+                    <p>Slow is the point.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">2</span>
+                    <p>Charging is recovery.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">3</span>
+                    <p>Credit-card touring is security.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">4</span>
+                    <p>Heavy pack is training, not punishment.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">5</span>
+                    <p>The bike is not the limiting factor; logistics are.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">6</span>
+                    <p>The Varg has power, not touring range.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">7</span>
+                    <p>Never ride loaded like you are unloaded.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">8</span>
+                    <p>Never plan a leg beyond 70% of proven range.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">9</span>
+                    <p>Never skip confirmed power casually.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">10</span>
+                    <p>Never leave expensive gear unsecured if you can buy safety.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">11</span>
+                    <p>Huge water gets humility.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">12</span>
+                    <p>Singletrack happens naked.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">13</span>
+                    <p>The stop is part of the trip.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">14</span>
+                    <p>The outlet is part of the route.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">15</span>
+                    <p>No 200-mile days is not failure.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">16</span>
+                    <p>Glassy water is a valid reason to make no progress.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">17</span>
+                    <p>If the day becomes memorable, the day succeeded.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">18</span>
+                    <p>You need interesting water, not just waves.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">19</span>
+                    <p>Outlets are chapels.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">20</span>
+                    <p>Hostel rhythm beats remote camping.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">21</span>
+                    <p>Rucking blocks are features, not accidents.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">22</span>
+                    <p>Content captures memory, not purpose.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">23</span>
+                    <p>Cafés are not fallback infrastructure.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">24</span>
+                    <p>You are optimizing for memory density, not distance.</p>
+                </div>
+                <div class="rule">
+                    <span class="rule-number">25</span>
+                    <p>The myth matters more than the miles.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission-statement">
+            <h3>🎯 MISSION IDENTITY</h3>
+            <p><strong>You are not optimizing for:</strong> Distance per day, speed, self-sufficiency, camping</p>
+            <p><strong>You are optimizing for:</strong></p>
+            <ul>
+                <li>Water access</li>
+                <li>Memory density</li>
+                <li>Weirdness</li>
+                <li>Recovery</li>
+                <li>Health</li>
+                <li>Social encounters</li>
+                <li>Cinematic content</li>
+                <li>Slow-motion adventure</li>
+                <li>Electric freedom</li>
+                <li>Daily ritual</li>
+            </ul>
+        </div>
+
+        <div class="core-formula">
+            <h3>⚙️ THE CORE FORMULA</h3>
+            <div class="formula-card">
+                <p>The Varg moves you across land.</p>
+                <p>The LIND unlocks water.</p>
+                <p>The backpack trains you.</p>
+                <p>The outlets slow you down.</p>
+                <p>The hostels secure the system.</p>
+                <p>The Fjallraven makes it livable.</p>
+                <p>The cameras prove it happened.</p>
+                <p>The slowness gives it soul.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Electric Surf Camino | Slow Water Pilgrimage | Nick Archuleta Edition</p>
+            <p>Not optimized for distance. Not optimized for speed. Optimized for memory density, weirdness, and water.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
